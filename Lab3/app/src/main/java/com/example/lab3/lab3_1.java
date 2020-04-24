@@ -11,13 +11,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-public class lab3_1 extends AppCompatActivity implements View.OnClickListener {
+public class lab3_1 extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        findViewById(R.id.next).setOnClickListener(this);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -51,11 +50,8 @@ public class lab3_1 extends AppCompatActivity implements View.OnClickListener {
         }
     }
 
-    @Override
-    public void onClick(View v) {
-        if(v.getId() == R.id.next) {
-            Intent intent = new Intent(this,lab3_2.class);
-            startActivity(intent);
-        }
-    }
+   public void showNextLab(View v) {
+        Intent intent = new Intent(this, lab3_2.class);
+        startActivity(intent);
+   }
 }
